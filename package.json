@@ -1,0 +1,40 @@
+{
+  "name": "jsondata",
+  "version": "1.0.0",
+  "description": "A module that saves and loads json data from a file",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joeyism/node-jsondata.git"
+  },
+  "keywords": [
+    "json",
+    "data",
+    "save",
+    "load",
+    "config",
+    "loader",
+    "management",
+    "json",
+    "file",
+    "read",
+    "write"
+  ],
+  "author": "Joey Sham <sham.joey@gmail.com> (http://www.joeyism.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joeyism/node-jsondata/issues"
+  },
+  "homepage": "https://github.com/joeyism/node-jsondata#readme",
+  "dependencies": {
+    "async": "^1.4.2",
+    "chai": "^3.2.0",
+    "istanbul": "^0.3.17",
+    "merge": "^1.2.0",
+    "mocha": "^2.2.5",
+    "xcept": "^1.0.0"
+  }
+}
