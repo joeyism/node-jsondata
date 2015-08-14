@@ -21,7 +21,9 @@
     "json",
     "file",
     "read",
-    "write"
+    "write",
+    "add",
+    "remove"
   ],
   "author": "Joey Sham <sham.joey@gmail.com> (http://www.joeyism.com)",
   "license": "ISC",
