@@ -2,12 +2,14 @@
 var fs = require('fs');
 var merge = require("merge");
 require("xcept");
+var emptyFcn = function(){};
 
 module.exports = function(){
     var that = this;
     this.data = {};
 
     this.load = function(filename, callback){
+        callback = callback || emptyFcn;
         var obj;
         fs.readFile(filename, 'utf8', function (err, data) {
             if (err) return callback(err);
@@ -18,16 +20,19 @@ module.exports = function(){
     };
 
     this.add = function(object, callback){
+        callback = callback || emptyFcn;
         that.data = merge(that.data, object);
         callback();
     };
 
     this.remove = function(key, callback){
+        callback = callback || emptyFcn;
         that.data = that.data.except(key);
         callback();
     };
 
     this.save = function(filename, callback){
+        callback = callback || emptyFcn;
         var filestuff = JSON.stringify(that.data, null, "\t");
         fs.writeFile(filename, filestuff, function(err){
             if (err) return callback(err);

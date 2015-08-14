@@ -55,5 +55,8 @@ Saves object to a file
     });
 
 ## Versions
+**1.0.1**
+* Allow to not have callbacks
+
 **1.0.0**
 * First commit
