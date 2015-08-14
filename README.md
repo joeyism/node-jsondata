@@ -15,10 +15,10 @@ In order to declare JsonData, you need to
     var jsondata = new JsonData();
 
 There are 4 methods available:
-[`load`](#load)
-[`add`](#add)
-[`remove`](#remove)
-[`save`](#save)
+* [`load`](#load)
+* [`add`](#add)
+* [`remove`](#remove)
+* [`save`](#save)
 
 And to get the data loaded, it is simply
 
