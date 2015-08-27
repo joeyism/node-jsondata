@@ -13,7 +13,7 @@ module.exports = function(){
         var obj;
         fs.readFile(filename, 'utf8', function (err, data) {
             if (err) {
-                if (err.indexOf('ENONET') > -1 ){
+                if (err.code === 'ENOENT'){
                     data = '{}';
                     fs.writeFile(filename, data, function(errwrite){
                         if (errwrite) return callback(errwrite);
