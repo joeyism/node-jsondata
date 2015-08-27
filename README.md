@@ -55,6 +55,9 @@ Saves object to a file
     });
 
 ## Versions
+**1.1.0**
+* load will create if it doesn't exist
+
 **1.0.1**
 * Allow to not have callbacks
 

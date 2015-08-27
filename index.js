@@ -12,7 +12,17 @@ module.exports = function(){
         callback = callback || emptyFcn;
         var obj;
         fs.readFile(filename, 'utf8', function (err, data) {
-            if (err) return callback(err);
+            if (err) {
+                if (err.indexOf('ENONET') > -1 ){
+                    data = '{}';
+                    fs.writeFile(filename, data, function(errwrite){
+                        if (errwrite) return callback(errwrite);
+                    });
+                }
+                else {
+                    return callback(err);
+                }
+            }
             obj = JSON.parse(data);
             that.data = obj;
             callback(null, obj);
